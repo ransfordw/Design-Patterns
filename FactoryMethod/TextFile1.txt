@@ -1,0 +1,5 @@
+﻿Factory Method Pattern
+
+- Gang of Four
+	Defines an interface for creating an object, but let subclasses decide which class to instantiate.
+	This lets a class defer instantiation to subclasses.
