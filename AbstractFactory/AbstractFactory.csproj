@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{62076C92-3540-40A4-B57E-7847E6D0366D}</ProjectGuid>
+    <ProjectGuid>{D17E8B3C-3806-425F-83D0-4BEA17902023}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FactoryMethod</RootNamespace>
-    <AssemblyName>FactoryMethod</AssemblyName>
+    <RootNamespace>AbstractFactory</RootNamespace>
+    <AssemblyName>AbstractFactory</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,19 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CitiSavingsAccount.cs" />
-    <Compile Include="ICreditUnionFactory.cs" />
-    <Compile Include="NationalSavingsAccount.cs" />
+    <Compile Include="ConcreteFactories\CitiCreditUnionFactory.cs" />
+    <Compile Include="ConcreteProducts\CitiLoanAccount.cs" />
+    <Compile Include="ConcreteProducts\CitiSavingsAccount.cs" />
+    <Compile Include="CreditUnionFactory.cs" />
+    <Compile Include="CreditUnionFactoryProvider.cs" />
+    <Compile Include="Interfaces\ILoanAccount.cs" />
+    <Compile Include="Interfaces\ISavingsAccount.cs" />
+    <Compile Include="LoanAccount.cs" />
+    <Compile Include="ConcreteFactories\NationalCreditUnionFactory.cs" />
+    <Compile Include="ConcreteProducts\NationalLoanAccount.cs" />
+    <Compile Include="ConcreteProducts\NationalSavingsAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavingsAccount.cs" />
-    <Compile Include="SavingsAccountFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="FactoryNotes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
